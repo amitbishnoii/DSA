@@ -243,5 +243,53 @@ function Pattern13() {
 }
 
 function Pattern14() {
+// A
+// AB
+// ABC
+// ABCD
+// ABCDE
+    for(let i = 0; i < 5; i++) {
+        let char = 65;
+        for(let j = 0; j <= i; j++) {
+            process.stdout.write(String.fromCharCode(char))
+            char += 1;
+        }
+        console.log();
+    }
+}
+
+function Pattern15() {
+// ABCDE
+// ABCD
+// ABC
+// AB
+// A
+    for(let i = 5; i > 0; i--) {
+        let char = 65;
+        for(let j = 0; j < i; j++) {
+            process.stdout.write(String.fromCharCode(char))
+            char += 1;
+        }
+        console.log();
+    }
+}
+
+function Pattern16() {
+// A
+// BB
+// CCC
+// DDDD
+// EEEEE
+    let char = 65;
+    for(let i = 0; i < 5; i++) {
+        for(let j = 0; j <= i; j++) {
+            process.stdout.write(String.fromCharCode(char))
+        }
+        char += 1;
+        console.log();
+    }
+}
+
+function Pattern17() {
     
 }
