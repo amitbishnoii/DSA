@@ -357,5 +357,52 @@ function Pattern19(n) {
     }
 }
 function Pattern20(n) {
-    
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    let spaces = 2 * n - 2;
+    for (let i = 1; i <= 2 * n - 1; i++) {
+        let stars = i;
+        if (i > n) {
+            stars = 2 * n - i;
+        }
+        for (let j = 0; j < stars; j++) {
+            process.stdout.write("*");
+        }
+        for (let j = 0; j < spaces; j++) {
+            process.stdout.write(" ");
+        }
+        for (let j = 0; j < stars; j++) {
+            process.stdout.write("*");
+        }
+        if (i < n) {
+            spaces -= 2;
+        } else {
+            spaces += 2;
+        }
+        console.log();
+    }
+}
+function Pattern21(n) {
+    // *****
+    // *   *
+    // *   *
+    // *   *
+    // *****
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
+                process.stdout.write("*");
+            } else {
+                process.stdout.write(" ");
+            }
+        }
+        console.log();
+    }
 }
