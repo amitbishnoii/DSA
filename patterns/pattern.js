@@ -12,7 +12,6 @@ function Pattern1() {
         console.log();
     }
 }
-
 function Pattern2() {
     // *
     // **
@@ -27,7 +26,6 @@ function Pattern2() {
         console.log();
     }
 }
-
 function Pattern3() {
     // 1
     // 12
@@ -41,7 +39,6 @@ function Pattern3() {
         console.log();
     }
 }
-
 function Pattern4() {
     // 1
     // 22
@@ -55,7 +52,6 @@ function Pattern4() {
         console.log();
     }
 }
-
 function Pattern5() {
     // *****
     // ****
@@ -69,7 +65,6 @@ function Pattern5() {
         console.log();
     }
 }
-
 function Pattern6() {
     // 12345
     // 1234
@@ -83,7 +78,6 @@ function Pattern6() {
         console.log();
     }
 }
-
 function Pattern7() {
     //     *
     //    ***
@@ -103,7 +97,6 @@ function Pattern7() {
         console.log();
     }
 }
-
 function Pattern8() {
     // *********
     //  *******
@@ -123,7 +116,6 @@ function Pattern8() {
         console.log();
     }
 }
-
 function Pattern9() {
     //     *
     //    ***
@@ -160,7 +152,6 @@ function Pattern9() {
         console.log();
     }
 }
-
 function Pattern10(n) {
     // *
     // **
@@ -180,7 +171,6 @@ function Pattern10(n) {
         console.log();
     }
 }
-
 function Pattern11() {
     // 1
     // 01
@@ -206,7 +196,6 @@ function Pattern11() {
         console.log();
     }
 }
-
 function Pattern12() {
     // 1      1
     // 12    21
@@ -225,13 +214,12 @@ function Pattern12() {
         console.log();
     }
 }
-
 function Pattern13() {
-// 1 
-// 2 3 
-// 4 5 6 
-// 7 8 9 10 
-// 11 12 13 14 15 
+    // 1
+    // 2 3
+    // 4 5 6
+    // 7 8 9 10
+    // 11 12 13 14 15
     let a = 1;
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j <= i; j++) {
@@ -241,55 +229,133 @@ function Pattern13() {
         console.log();
     }
 }
-
 function Pattern14() {
-// A
-// AB
-// ABC
-// ABCD
-// ABCDE
-    for(let i = 0; i < 5; i++) {
+    // A
+    // AB
+    // ABC
+    // ABCD
+    // ABCDE
+    for (let i = 0; i < 5; i++) {
         let char = 65;
-        for(let j = 0; j <= i; j++) {
-            process.stdout.write(String.fromCharCode(char))
+        for (let j = 0; j <= i; j++) {
+            process.stdout.write(String.fromCharCode(char));
             char += 1;
         }
         console.log();
     }
 }
-
 function Pattern15() {
-// ABCDE
-// ABCD
-// ABC
-// AB
-// A
-    for(let i = 5; i > 0; i--) {
+    // ABCDE
+    // ABCD
+    // ABC
+    // AB
+    // A
+    for (let i = 5; i > 0; i--) {
         let char = 65;
-        for(let j = 0; j < i; j++) {
-            process.stdout.write(String.fromCharCode(char))
+        for (let j = 0; j < i; j++) {
+            process.stdout.write(String.fromCharCode(char));
             char += 1;
         }
         console.log();
     }
 }
-
 function Pattern16() {
-// A
-// BB
-// CCC
-// DDDD
-// EEEEE
+    // A
+    // BB
+    // CCC
+    // DDDD
+    // EEEEE
     let char = 65;
-    for(let i = 0; i < 5; i++) {
-        for(let j = 0; j <= i; j++) {
-            process.stdout.write(String.fromCharCode(char))
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+            process.stdout.write(String.fromCharCode(char));
         }
         char += 1;
         console.log();
     }
 }
-
 function Pattern17() {
+    //     A
+    //    ABA
+    //   ABCBA
+    //  ABCDCBA
+    // ABCDEDCBA
+    for (let i = 0; i < 5; i++) {
+        let char = 65;
+        for (let j = 0; j < 5 - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+            process.stdout.write(String.fromCharCode(char));
+            if (j < i) {
+                char += 1;
+            } else {
+                char -= 1;
+            }
+        }
+        for (let j = 0; j < 5 - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        console.log();
+    }
+}
+function Pattern18() {
+    // E
+    // DE
+    // CDE
+    // BCDE
+    // ABCDE
+    let char = 69;
+    for (let i = 0; i < 5; i++) {
+        let prevChar = char;
+        for (let j = 0; j <= i; j++) {
+            process.stdout.write(String.fromCharCode(char));
+            char += 1;
+        }
+        char = prevChar - 1;
+        console.log();
+    }
+}
+function Pattern19(n) {
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    let spaces = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i; j++) {
+            process.stdout.write("*");
+        }
+        for (let j = 0; j < spaces; j++) {
+            process.stdout.write(" ");
+        }
+        for (let j = 0; j < n - i; j++) {
+            process.stdout.write("*");
+        }
+        console.log();
+        spaces += 2;
+    }
+    let lowerSpaces = 8;
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 0; j < i; j++) {
+            process.stdout.write("*");
+        }
+        for (let j = 0; j < lowerSpaces; j++) {
+            process.stdout.write(" ");
+        }
+        for (let j = 0; j < i; j++) {
+            process.stdout.write("*");
+        }
+        console.log();
+        lowerSpaces -= 2;
+    }
+}
+function Pattern20(n) {
     
 }
