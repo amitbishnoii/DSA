@@ -6,3 +6,15 @@ for (let i = 0; i < arr.length; i++) {
     hash[arr[i]] += 1;
 }
 
+// count frequency of numbers
+function countFreq(arr) {
+    let map = new Map();
+    for (let i = 0; i < arr.length; i++) {
+        map.set(arr[i], (map.get(arr[i]) || 0) + 1);
+    }
+    map.forEach((value, key) => {
+        console.log(key, "->", value);
+    });
+}
+
+countFreq([1, 1, 2, 3, 1, 2]);
