@@ -1,14 +1,18 @@
 let arr = [12, 43, 22, 5, 1, 24];
 
 function sort(arr) {
+    let resume = false;
     for (let i = arr.length - 1; i > 0; i--) {
+        resume = false;
         for (let j = 1; j <= i; j++) {
             if (arr[j] < arr[j - 1]) {
                 let temp = arr[j];
                 arr[j] = arr[j - 1];
                 arr[j - 1] = temp;
+                resume = true;
             }
         }
+        if (!resume) break;
     }
 }
 
