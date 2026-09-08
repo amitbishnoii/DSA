@@ -12,7 +12,6 @@ function mergeSort(arr, low, high) {
 
 function merge(arr, low, mid, high) {
     let temp = [];
-    let ind = 0;
     let i = low;
     let j = mid + 1;
     while (i <= mid && j <= high) {
