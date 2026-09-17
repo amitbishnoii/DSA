@@ -3,6 +3,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+
 var minSubArrayLen = function (target, nums) {
     let result = Number.MAX_SAFE_INTEGER;
     let left = 0;
