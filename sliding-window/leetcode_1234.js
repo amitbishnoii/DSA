@@ -1,4 +1,4 @@
-/**
+/**https://leetcode.com/problems/replace-the-substring-for-balanced-string/
  * @param {string} s
  * @return {number}
  */
@@ -20,6 +20,8 @@ var balancedString = function (s) {
         }
         return true;
     }
+
+    if (valid()) return 0;
 
     while (right < s.length) {
         map.set(s.charAt(right), map.get(s.charAt(right)) - 1);
